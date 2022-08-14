@@ -15,3 +15,7 @@ def whois_url(url: str):
     print("Domain creation date:", whois_info.creation_date)
     print("Expiration date:", whois_info.expiration_date)
     print(whois_info)
+
+
+if __name__ == "__main__":
+    app()

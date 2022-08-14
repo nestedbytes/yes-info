@@ -1,9 +1,9 @@
+# Import packages
 import whois
 import typer
-
+# Initialize
 app = typer.Typer()
-
-
+# whous-url
 @app.command()
 def whois_url(url: str):
     
@@ -16,9 +16,10 @@ def whois_url(url: str):
     print("Expiration date:", whois_info.expiration_date)
     print(whois_info)
 
-
+# about
 @app.command()
 def about():
     print("Get info for osint ! GitHub: https://github.com/shourgamer2/yes-info")
+# Run
 if __name__ == "__main__":
     app()

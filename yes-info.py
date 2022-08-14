@@ -23,7 +23,7 @@ def about():
 
 @app.command()
 def credit():
-    print("Get info for osint ! GitHub: https://github.com/shourgamer2/yes-info")
+    print("Written by shourgamer2 | Website: https://shourgamer2.tk/ | ")
 # Run
 if __name__ == "__main__":
     app()

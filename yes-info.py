@@ -20,6 +20,10 @@ def whois_url(url: str):
 @app.command()
 def about():
     print("Get info for osint ! GitHub: https://github.com/shourgamer2/yes-info")
+
+@app.command()
+def credit():
+    print("Get info for osint ! GitHub: https://github.com/shourgamer2/yes-info")
 # Run
 if __name__ == "__main__":
     app()

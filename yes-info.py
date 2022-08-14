@@ -23,7 +23,7 @@ def about():
 
 @app.command()
 def credit():
-    print("Written by shourgamer2 | Website: https://shourgamer2.tk/ | ")
+    print("Written by shourgamer2 | Website: https://shourgamer2.tk/ | GitHub: https://github.com/shourgamer2")
 # Run
 if __name__ == "__main__":
     app()

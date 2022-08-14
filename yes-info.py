@@ -17,5 +17,8 @@ def whois_url(url: str):
     print(whois_info)
 
 
+@app.command()
+def about():
+    print("Get info for osint ! GitHub: https://github.com/shourgamer2/yes-info")
 if __name__ == "__main__":
     app()

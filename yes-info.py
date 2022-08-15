@@ -2,6 +2,8 @@
 import whois
 import typer
 import phonenumbers
+from phonenumbers import geocoder
+from phonenumbers import carrier
 # Initialize
 app = typer.Typer()
 # whous-url
@@ -16,7 +18,14 @@ def whois_url(url: str):
     print("Domain creation date:", whois_info.creation_date)
     print("Expiration date:", whois_info.expiration_date)
     print(whois_info)
-
+@app.command()
+def phone(nbr: int):
+    phonenbr = phonenumbers.parse(nbr)
+    print("The location of this phone number is:")
+    print(geocoder.description_for_number(nbr,'en'))
+    print("The operator is:")   
+    print(carrier.name_for_number(phonenbr,
+                              'en')) 
 # about
 @app.command()
 def about():

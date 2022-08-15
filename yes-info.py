@@ -19,10 +19,11 @@ def whois_url(url: str):
     print("Expiration date:", whois_info.expiration_date)
     print(whois_info)
 @app.command()
-def phone(nbr: int):
-    phonenbr = phonenumbers.parse(nbr)
+def phone(nbr):
+    phnbr = nbr
+    phonenbr = phonenumbers.parse(phnbr)
     print("The location of this phone number is:")
-    print(geocoder.description_for_number(nbr,'en'))
+    print(geocoder.description_for_number(phonenbr,'en'))
     print("The operator is:")   
     print(carrier.name_for_number(phonenbr,
                               'en')) 
